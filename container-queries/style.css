@@ -1,0 +1,40 @@
+.card {
+  flex-direction: row;
+}
+
+main,
+.sidebar {
+  /* Pojmenování Kontejneru */
+  container-name: card-container;
+
+  /* Definice Kontejneru */
+  container-type: inline-size;
+}
+
+/* Inicializace Container Query Přes Konkrétní Kontejner (Podle container-name) */
+@container card-container (max-width: 500px) {
+  .card {
+    flex-direction: column;
+  }
+}
+
+/* Inicializace Container Query Globální (Všechny Kontejnery) */
+/* @container card-container (max-width: 500px) {
+  .card {
+    flex-direction: column;
+  }
+} */
+
+/* Příklad Kde Media Query Je Potřeba - Skrytí Sidebaru */
+/* Saháme Mimo Kontejner */
+@media (max-width: 400px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Všechny Elementy Co Mají Jako Child Element .card Definujeme Jako Kontejner */
+/* :has(> .card) {
+  container-type: inline-size;
+  container-name: card-container;
+} */

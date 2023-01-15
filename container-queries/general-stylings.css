@@ -1,0 +1,23 @@
+html,
+body,
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+}
+
+main {
+  flex: 3;
+  padding: 45px 20px;
+}
+
+.sidebar {
+  width: 300px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 0;
+}
